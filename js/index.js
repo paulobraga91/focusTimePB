@@ -1,3 +1,5 @@
+import { Sounds } from "./sounds.js"
+
 const buttonPlay = document.querySelector('.playButton')
 const buttonStop = document.querySelector('.stopButton')
 const buttonPlusTime = document.querySelector('.timePlusButton')
@@ -11,45 +13,26 @@ let secondsDisplay = document.querySelector('.seconds')
 let minutes = 0
 let seconds = 0
 let timer = 0
-const sound1 = new Audio('./assets/Lareira.wav')
-const sound2 = new Audio('./assets/Chuva.wav')
-const sound3 = new Audio('./assets/Floresta.wav')
-const sound4 = new Audio('./assets/Lareira.wav')
 
-
-function stopAllSounds(){
-    sound1.pause()
-    sound1.currentTime = 0
-
-    sound2.pause()
-    sound2.currentTime = 0
-    
-    sound3.pause()
-    sound3.currentTime = 0
-    
-    sound4.pause()
-    sound4.currentTime = 0
-
-}
+const sound =  Sounds()
 
 buttonSound01.addEventListener('click',function(){
-    stopAllSounds()
-    sound1.play()
+    sound.playSounds(this.getAttribute('class'))
+    buttonSound01.style.backgroundColor = 'blue'
 })
 
 buttonSound02.addEventListener('click',function(){
-    stopAllSounds()
-    sound2.play()
+   sound.playSounds(this.getAttribute('class'))
 })
 
 buttonSound03.addEventListener('click',function(){
-    stopAllSounds()
-    sound3.play()
+    
+    sound.playSounds(this.getAttribute('class'))
 })
 
 buttonSound04.addEventListener('click',function(){
-    stopAllSounds()
-    sound4.play()
+   
+    sound.playSounds(this.getAttribute('class'))
 })
 
 
@@ -84,7 +67,7 @@ function stopTimer(){
     minutes = 0
     seconds = 0
     updateDisplay()
-    stopAllSounds()
+    sound.stopAllSounds()
 }
 
 function updateDisplay(){
@@ -101,7 +84,7 @@ function contador(){
         minutes--
         seconds = 59
     }else{
-        clearInterval(timerContador)
+        clearInterval(timer)
         timer = null
         return
     }
