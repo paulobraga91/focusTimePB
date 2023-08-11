@@ -35,29 +35,21 @@ function stopAllSounds(){
 buttonSound01.addEventListener('click',function(){
     stopAllSounds()
     sound1.play()
-       
-
 })
 
 buttonSound02.addEventListener('click',function(){
     stopAllSounds()
     sound2.play()
-    
-
 })
 
 buttonSound03.addEventListener('click',function(){
     stopAllSounds()
     sound3.play()
-     
-
 })
 
 buttonSound04.addEventListener('click',function(){
     stopAllSounds()
     sound4.play()
-      
-
 })
 
 
