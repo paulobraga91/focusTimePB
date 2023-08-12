@@ -10,7 +10,8 @@ import{
     buttonSound04,
     minutesDisplay,
     secondsDisplay,
-    buttonDark
+    buttonDark,
+    buttonLight
 } from "./elements.js"
 import { toogleDarkModeButton } from "../toogleDarkMode.js"
 
@@ -20,6 +21,7 @@ let timer = 0
 
 const sound =  Sounds()
 
+buttonLight.addEventListener('click',toogleDarkModeButton)
 buttonDark.addEventListener('click',toogleDarkModeButton)
 
 buttonSound01.addEventListener('click',function(){

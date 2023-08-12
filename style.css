@@ -50,7 +50,7 @@ button{
     gap:3rem;
 }
 
-button:hover svg{
+.controls button:hover svg, .sound button svg{
 filter:brightness(50%);
 }
 
@@ -63,9 +63,35 @@ filter:brightness(50%);
     color: aliceblue;    
 }
 
-.darkModeButton{
-    color: black;
+.darkModeButton,.lightModeButton{
     position: absolute;
     right: 0;
     padding: 5rem;
+}
+
+.darkModeButton svg:hover,.lightModeButton svg:hover{
+    fill:yellow
+}
+.hide{
+    display: none;
+}
+
+@media (max-width:700px){
+    .app{
+        display:flex;
+        flex-direction: column;
+        align-self: center;
+        justify-content: center;
+    }
+
+    .clock{
+        align-self: center;
+        justify-content: center;
+    }
+
+    .sounds{
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        margin: 0 5rem;
+    }
 }
