@@ -18,7 +18,6 @@ body{
     gap: 10rem;
     align-self: center;
     justify-content: center;
-    
 }
 
 .sounds{
@@ -53,4 +52,20 @@ button{
 
 button:hover svg{
 filter:brightness(50%);
+}
+
+.buttonChecked{
+    fill:#02799D;
+}
+
+.darkmode{
+    background-color: black;
+    color: aliceblue;    
+}
+
+.darkModeButton{
+    color: black;
+    position: absolute;
+    right: 0;
+    padding: 5rem;
 }

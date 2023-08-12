@@ -1,3 +1,10 @@
+import { 
+    btn1,
+    btn2,
+    btn3,
+    btn4
+} from "./elements.js"
+
 export function Sounds(){
 
     const sound1 = new Audio('./assets/Floresta.wav')
@@ -10,8 +17,16 @@ export function Sounds(){
     sound3.loop = true
     sound4.loop = true
     
-    
+        
+    function resetBackgroundButtonChecked(){
+        btn1.classList.remove('buttonChecked')
+        btn2.classList.remove('buttonChecked')
+        btn3.classList.remove('buttonChecked')
+        btn4.classList.remove('buttonChecked')
+    }
+
     function stopAllSounds(){
+        resetBackgroundButtonChecked()
         sound1.pause()
         sound1.currentTime = 0
     
@@ -25,31 +40,32 @@ export function Sounds(){
         sound4.currentTime = 0
     }
 
-
     function playSounds(soundToPlay){
-
+        resetBackgroundButtonChecked()
         stopAllSounds()
 
         if (soundToPlay === 'sound1'){
             sound1.play()
-            console.log('tocando som 1')
+            btn1.classList.add('buttonChecked')
+            
         }else if(soundToPlay === 'sound2'){
             sound2.play()
-            console.log('tocando som 2')
+            btn2.classList.add('buttonChecked')
+            
         }else if (soundToPlay === 'sound3'){
             sound3.play()
-            console.log('tocando som 3')
+            btn3.classList.add('buttonChecked')
+            
         }else if(soundToPlay === 'sound4'){
             sound4.play()
-            console.log('tocando som 4')
+            btn4.classList.add('buttonChecked')
+            
         }
 
     }
 
-
     return {
         stopAllSounds, 
-        playSounds
+        playSounds,
     } 
-
 }
