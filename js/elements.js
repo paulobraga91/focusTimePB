@@ -14,6 +14,7 @@ const btn3 = document.querySelector('.icon3')
 const btn4 = document.querySelector('.icon4')
 const buttonDark = document.querySelector('.darkModeButton')
 const buttonLight = document.querySelector('.lightModeButton')
+const rangeVolume = document.querySelector('.rangeVolume')
 
 export{
     buttonPlay,
@@ -28,5 +29,6 @@ export{
     secondsDisplay,
     btn1,btn2,btn3,btn4,
     buttonDark,
-    buttonLight
+    buttonLight,
+    rangeVolume
 }

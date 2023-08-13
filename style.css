@@ -11,6 +11,7 @@
 body{
     display: grid;
     height: 100vh;
+    font-family: roboto;
 }
 
 .app{
@@ -22,9 +23,17 @@ body{
 
 .sounds{
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-areas:"a b"
+                        "c d"
+                        "v v"; 
     grid-gap: 3rem;
 }
+
+.sound1{grid-area: a;}
+.sound2{grid-area: b;}
+.sound3{grid-area: c;}
+.sound4{grid-area: d;}
+
 
 button{
     border: none;
@@ -41,7 +50,6 @@ button{
 .clock{
     display: flex;
     font-size: 12rem;
-    font-family: roboto;
 }
 
 .controls{
@@ -76,6 +84,19 @@ filter:brightness(50%);
     display: none;
 }
 
+.volume{
+    display: grid;
+    justify-content: center;
+    font-size: 1.6rem;
+    gap: 1rem;
+    grid-area: v;
+    width: 100% ;
+}
+
+.rangeVolume{
+    width: 30rem;
+}
+
 @media (max-width:700px){
     .app{
         display:flex;
@@ -85,6 +106,7 @@ filter:brightness(50%);
     }
 
     .clock{
+        margin-top: 10rem;
         align-self: center;
         justify-content: center;
     }

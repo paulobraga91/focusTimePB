@@ -40,6 +40,13 @@ export function Sounds(){
         sound4.currentTime = 0
     }
 
+    function setVolume(volume){
+        sound1.volume = volume
+        sound2.volume = volume
+        sound3.volume = volume
+        sound4.volume = volume
+    }
+
     function playSounds(soundToPlay){
         resetBackgroundButtonChecked()
         stopAllSounds()
@@ -67,5 +74,6 @@ export function Sounds(){
     return {
         stopAllSounds, 
         playSounds,
+        setVolume,
     } 
 }

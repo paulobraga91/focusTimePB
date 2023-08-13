@@ -11,7 +11,8 @@ import{
     minutesDisplay,
     secondsDisplay,
     buttonDark,
-    buttonLight
+    buttonLight,
+    rangeVolume
 } from "./elements.js"
 import { toogleDarkModeButton } from "../toogleDarkMode.js"
 
@@ -38,6 +39,11 @@ buttonSound03.addEventListener('click',function(){
 
 buttonSound04.addEventListener('click',function(){
   sound.playSounds(this.getAttribute('class'))
+})
+
+rangeVolume.addEventListener('input', function(){
+    let volumeValue = this.value
+    sound.setVolume(volumeValue)
 })
 
 buttonPlusTime.addEventListener('click',function(){
