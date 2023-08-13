@@ -2,7 +2,8 @@ import {
     btn1,
     btn2,
     btn3,
-    btn4
+    btn4,
+    rangeVolume
 } from "./elements.js"
 
 export function Sounds(){
@@ -26,6 +27,7 @@ export function Sounds(){
     }
 
     function stopAllSounds(){
+        rangeVolume.value = 1
         resetBackgroundButtonChecked()
         sound1.pause()
         sound1.currentTime = 0

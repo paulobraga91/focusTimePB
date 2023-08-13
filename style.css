@@ -91,6 +91,7 @@ filter:brightness(50%);
     gap: 1rem;
     grid-area: v;
     width: 100% ;
+    
 }
 
 .rangeVolume{
